@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 from heapq import heappush, heappop
 
 
@@ -16,7 +17,7 @@ def print_tree(tree, level=0, levels=[]):
         if level == 0:
             print(str(node))
         elif isinstance(child, int):
-            print(branch + str(node) + " ── " + str(child))
+            print(branch + f"'{node}'" + " ── " + str(child))
         else:
             print(branch + str(node).split()[0])
         print_tree(child, level + 1, levels + [True])
